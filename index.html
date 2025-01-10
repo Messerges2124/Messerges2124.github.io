@@ -6,11 +6,31 @@
 <title>Nicholas Messerges - Portfolio</title>
 <link rel="stylesheet" href="./style.css">
 <style>
+    :root {
+        --primary-color: #3498db;
+        --secondary-color: #2c3e50;
+        --text-color: #fff;
+        --background-color: #1a1a1a;
+        --card-background: #2c3e50;
+        --highlight-color: #f4b400;
+    }
+    
+    [data-theme="light"] {
+        --primary-color: #f4b400;
+        --secondary-color: #f4f4f4;
+        --text-color: #000;
+        --background-color: #ffffff;
+        --card-background: #e0e0e0;
+        --highlight-color: #3498db;
+    }
+    
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        transition: all 0.3s ease-in-out;
     }
     .container {
         max-width: 960px;
@@ -19,19 +39,20 @@
     }
     .project {
         margin-bottom: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--primary-color);
         padding: 20px;
         border-radius: 10px;
-        background-color: #f9f9f9;
+        background-color: var(--card-background);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, background-color 0.3s;
     }
     .project:hover {
         transform: scale(1.05);
+        background-color: var(--highlight-color);
     }
     header {
-        background-color: #333;
-        color: #fff;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
         padding: 20px 0;
         text-align: center;
         animation: fadeInDown 1s;
@@ -58,33 +79,29 @@
     }
     nav a {
         text-decoration: none;
-        color: #fff;
+        color: var(--text-color);
         font-weight: bold;
         transition: color 0.3s;
     }
     nav a:hover {
-        color: #f4b400;
+        color: var(--highlight-color);
     }
-    img {
-        max-width: 100%;
+    .theme-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--primary-color);
+        color: var(--text-color);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
         border-radius: 5px;
-    }
-    .video-container {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .fade-in {
-        animation: fadeIn 1s;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
     }
     footer {
         text-align: center;
         padding: 10px;
-        background-color: #333;
-        color: #fff;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
         animation: fadeInUp 1s;
     }
     @keyframes fadeInUp {
@@ -99,7 +116,14 @@
     }
 </style>
 </head>
-<body>
+<body data-theme="dark">
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.setAttribute('data-theme', body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        }
+    </script>
     <header>
         <nav>
             <ul>
@@ -113,30 +137,19 @@
     
     <section id="about" class="fade-in">
         <div class="container">
-            <img src="Images/ProfPic.jpg" alt="Profile Photo" style="width: 200px; height: auto;">
             <h1>Nicholas Messerges</h1>
-            <p style="font-family: 'Courier New', Courier, monospace; color: brown">Student</p>
-            <p>I am a junior studying Computer Science with a minor in AI at Iowa State University, passionate about VR, game development, and artificial intelligence.</p>
+            <p>Junior Computer Science student at Iowa State University, passionate about VR, game development, and AI.</p>
         </div>
     </section>
 
     <section id="current" class="fade-in">
         <div class="container">
             <h2>Currently Working On</h2>
-            
             <div class="project">
                 <h3>Firefighter VR Training</h3>
                 <p>A VR simulation requiring users to physically crawl through a burning building.</p>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/0NhemHJc274" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>Time-Travel Puzzle Game</h3>
-                <p>Very Early Development Unity game featuring time-travel mechanics.</p>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -145,20 +158,11 @@
     <section id="projects" class="fade-in">
         <div class="container">
             <h2>Projects</h2>
-            
             <div class="project">
                 <h3>FPS Unity Game</h3>
                 <p>A first-person shooter game developed in Unity.</p>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/-o2w4q6lfes" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>VR Hand Automation</h3>
-                <p>A VR project focused on automated hand interactions using inverse kinematics.</p>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ztbgw8t8u8M" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
