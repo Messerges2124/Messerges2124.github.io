@@ -3,66 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicholas Messerges - Portfolio</title>
+<link rel="stylesheet" href="./style.css">
 <style>
     .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px;
     }
     .project {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    </style>
-<title>Nicholas Messerges - Portfolio</title>
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    nav li {
+        margin: 0 20px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+    }
+    .video-container {
+        text-align: center;
+        margin: 20px 0;
+    }
+</style>
 </head>
-<link rel="stylesheet" href="./style.css">
-<header>
-    <nav>
-    <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    </ul>
-    </nav>
-    </header>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <section id="about">
         <div class="container">
             <img src="Images/ProfPic.jpg" alt="Profile Photo" style="width: 200px; height: auto;">
             <h1>Nicholas Messerges</h1>
-            <p style="font-family: 'Courier New', Courier, monospace; color: brown"> Student</p>
-            <p>I am a Sophomore studying computer science at Iowa State</p>
+            <p style="font-family: 'Courier New', Courier, monospace; color: brown">Student</p>
+            <p>I am a junior studying Computer Science with a minor in AI at Iowa State University, passionate about VR, game development, and artificial intelligence.</p>
         </div>
     </section>
+
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
+            
             <div class="project">
-            <img src= "Images/Project1.png" alt="Project 1" style="width: 200px; height: auto;">
-            <h3>Coms 309 Project </h3>
-            <p> This project was a for the class Coms 309 and I worked on it with a team of 3 other people. The project was a mobil phyics
-                puzzle game where you would carve out the gound to guide balls to the end. The game was multiplayer and users could make their own levels
-            </p>
-            </div>    
+                <h3>Firefighter VR Training</h3>
+                <p>A VR simulation requiring users to physically crawl through a burning building.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Time-Travel Puzzle Game</h3>
+                <p>A Unity-based game featuring realistic time-travel mechanics.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>AI Research Project</h3>
+                <p>Machine learning applications in simulation and interactive environments.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>FPS Unity Game</h3>
+                <p>A first-person shooter game developed in Unity.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qOC9xF1TtE0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>VR Hand Automation</h3>
+                <p>A VR project focused on automated hand interactions using inverse kinematics.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ztbgw8t8u8M" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Marble Maze Mobile Game</h3>
+                <p>A mobile game developed in Unity, featuring physics-based marble navigation.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qOC9xF1TtE0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>You can reach me at nickm04@iastate.edu</p>
-            </div>
-    </section>
-   
+            <p>You can reach me at <a href="mailto:nickm04@iastate.edu">nickm04@iastate.edu</a></p>
+        </div>
     </section>
     
-       
-        
-    
-        <footer>
-            <p>&copy; 2024 Nicholas Messerges</p>
-            </footer>
-        
+    <footer>
+        <p>&copy; 2024 Nicholas Messerges</p>
+    </footer>
+</body>
 </html>
-
-    
